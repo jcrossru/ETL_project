@@ -1,0 +1,51 @@
+CREATE DATABASE stocks_db;
+
+USE stocks_db;
+
+
+CREATE TABLE all_stocks_5yr (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  stock_date DATE,
+  open		DECIMAL(10,2),
+  high		DECIMAL(10,2),
+  low		DECIMAL(10,2),
+  close		DECIMAL(10,2),
+  volume	INT,
+  Name 	VARCHAR(30) NOT NULL
+  );
+  
+CREATE TABLE companylist_nasdq (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Symbol 	VARCHAR(30) NOT NULL,
+  Name		VARCHAR(30) NOT NULL,
+  LastSale	DECIMAL(18,2),
+  MarketCap	DECIMAL(18,2),
+  IPOyear	VARCHAR(50) NOT NULL,
+  Sector	VARCHAR(50) NOT NULL,
+  industry	VARCHAR(100) NOT NULL,
+  Summary	VARCHAR(100) NOT NULL,
+  Quote		VARCHAR(100) NOT NULL
+  );
+
+CREATE TABLE companylist_nyse (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Symbol 	VARCHAR(30) NOT NULL,
+  Name		VARCHAR(30) NOT NULL,
+  LastSale	DECIMAL(18,2),
+  MarketCap	DECIMAL(18,2),
+  IPOyear	VARCHAR(50) NOT NULL,
+  Sector	VARCHAR(50) NOT NULL,
+  industry	VARCHAR(100) NOT NULL,
+  Summary	VARCHAR(100) NOT NULL,
+  Quote		VARCHAR(100) NOT NULL
+  );
+
+CREATE TABLE industry_analysis (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  Symbol 	VARCHAR(30) NOT NULL,
+  Name		VARCHAR(30) NOT NULL,
+  MarketCap	DECIMAL(18,2),
+  Sector	VARCHAR(50) NOT NULL,
+  industry	VARCHAR(100) NOT NULL,
+  Summary	VARCHAR(100) NOT NULL
+  );
