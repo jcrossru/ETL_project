@@ -5,7 +5,7 @@ USE stocks_db;
 
 CREATE TABLE all_stocks_5yr (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  stock_date DATE,
+  date 		DATE,
   open		DECIMAL(10,2),
   high		DECIMAL(10,2),
   low		DECIMAL(10,2),
