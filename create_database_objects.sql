@@ -1,11 +1,13 @@
+drop DATABASE stocks_db;
+
+
 CREATE DATABASE stocks_db;
 
 USE stocks_db;
 
-
 CREATE TABLE all_stocks_5yr (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  date 		DATE,
+  date DATE,
   open		DECIMAL(10,2),
   high		DECIMAL(10,2),
   low		DECIMAL(10,2),
@@ -13,7 +15,8 @@ CREATE TABLE all_stocks_5yr (
   volume	INT,
   Name 	VARCHAR(30) NOT NULL
   );
-  
+
+ 
 CREATE TABLE companylist_nasdq (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   Symbol 	VARCHAR(30) NOT NULL,
@@ -23,21 +26,20 @@ CREATE TABLE companylist_nasdq (
   IPOyear	VARCHAR(50) NOT NULL,
   Sector	VARCHAR(50) NOT NULL,
   industry	VARCHAR(100) NOT NULL,
-  Summary	VARCHAR(100) NOT NULL,
-  Quote		VARCHAR(100) NOT NULL
-  );
+  SummaryQuote	VARCHAR(100) NOT NULL  );
+
+drop TABLE companylist_nyse ;
 
 CREATE TABLE companylist_nyse (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  Symbol 	VARCHAR(30) NOT NULL,
-  Name		VARCHAR(30) NOT NULL,
+  Symbol 	VARCHAR(30) ,
+  Name		VARCHAR(30) ,
   LastSale	DECIMAL(18,2),
   MarketCap	DECIMAL(18,2),
-  IPOyear	VARCHAR(50) NOT NULL,
-  Sector	VARCHAR(50) NOT NULL,
-  industry	VARCHAR(100) NOT NULL,
-  Summary	VARCHAR(100) NOT NULL,
-  Quote		VARCHAR(100) NOT NULL
+  IPOyear	VARCHAR(50) ,
+  Sector	VARCHAR(50) ,
+  industry	VARCHAR(100),
+  SummaryQuote	VARCHAR(100)
   );
 
 CREATE TABLE industry_analysis (
