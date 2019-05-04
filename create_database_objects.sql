@@ -20,22 +20,21 @@ CREATE TABLE all_stocks_5yr (
 CREATE TABLE companylist_nasdq (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   Symbol 	VARCHAR(30) NOT NULL,
-  Name		VARCHAR(30) NOT NULL,
-  LastSale	DECIMAL(18,2),
-  MarketCap	DECIMAL(18,2),
+  Name		VARCHAR(100) NOT NULL,
+  LastSale	DECIMAL(28,8),
+  MarketCap	DECIMAL(28,8),
   IPOyear	VARCHAR(50) NOT NULL,
   Sector	VARCHAR(50) NOT NULL,
   industry	VARCHAR(100) NOT NULL,
   SummaryQuote	VARCHAR(100) NOT NULL  );
 
-drop TABLE companylist_nyse ;
 
 CREATE TABLE companylist_nyse (
   id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   Symbol 	VARCHAR(30) ,
-  Name		VARCHAR(30) ,
-  LastSale	DECIMAL(18,2),
-  MarketCap	DECIMAL(18,2),
+  Name		VARCHAR(100) ,
+  LastSale	DECIMAL(28,8),
+  MarketCap	DECIMAL(28,8),
   IPOyear	VARCHAR(50) ,
   Sector	VARCHAR(50) ,
   industry	VARCHAR(100),
