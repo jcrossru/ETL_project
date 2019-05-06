@@ -41,12 +41,9 @@ CREATE TABLE companylist_nyse (
   SummaryQuote	VARCHAR(100)
   );
 
-CREATE TABLE industry_analysis (
-  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  Symbol 	VARCHAR(30) NOT NULL,
-  Name		VARCHAR(30) NOT NULL,
-  MarketCap	DECIMAL(18,2),
-  Sector	VARCHAR(50) NOT NULL,
-  industry	VARCHAR(100) NOT NULL,
-  Summary	VARCHAR(100) NOT NULL
-  );
+CREATE TABLE stock_final_analysis (  
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  
+  Symbol     VARCHAR(30) NOT NULL,  
+  MarketCap    DECIMAL(18,2),  
+  Sector    VARCHAR(50) NOT NULL,  
+  industry    VARCHAR(100) NOT NULL  );
