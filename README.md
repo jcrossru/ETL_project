@@ -1,6 +1,6 @@
 # ETL_project
 
-                                        Stock Report for Consulting Company
+                                        STOCK REPORT FOR CONSULTING COMPANY
 
 Stock markets are some of the most important parts of today's global economy. Countries around the world depend on stock markets for economic growth.The history of stock exchange goes back a few centuries. The first stock was officially formed in London back in 1801, despite the ban on issuing shares. New York Stock Exchange (NYSE) was formed in 1817 and was a very important moment in history. Nowadays there are hundreds of stocks out there. Having the data can help us to analyze which industry is more successful. Our company Q4 goal is to determine which sectors we want to work with and what kind of clients we would like to bring onboard. In order to pick up the stock we consider to invest in and what clients we would like to bring onboard we have to determine what kind of investors we are ourselves. There are two types of investors. A follower of technical analysis is guided not by value, but by the trends, hence it can be considered as a short-term, where fundamental is thought of as a long-term strategy. We should consider both. We have decided to see which sector has the most shares, hence the most profitable. For this we found two datasets (Kaggle, NasdaQ).
 
@@ -61,22 +61,28 @@ ETL process (Run the Pipeline):
 Transformation
 
 We now got to our analysis project that consists of 3 parts.
-    Part 1 - Data Minging
+
+                    Part 1 - Data Minging
+                    
 ~ Read in both tables (nasdaq & nyse) from the DataBase
 ~ Drop unnecessary columns as well as NaN values for cleaner look
 ~ Save both DataFrames in a list and combine the DataFrames
 ~ See if there are any duplicates for Symbols, if so check if they are identical to make sure we don’t lose the data before dropping the duplicates
-    Part 2 - Uploading a new table into DataBase
+
+                    Part 2 - Uploading a new table into DataBase
+                    
 ~ Transport the DataFrame to the Table that was already created in MySQL, by using df.to_sql
 ~ Save the reference to Analysis Table
 ~ Create a Session
-    Part 3 - Sector & Industry Analysis
+
+                    Part 3 - Sector & Industry Analysis
+                    
 ~ Perform session query: filter by Sector to reveal which sector has the most shares
 ~ Now that we know “Consumer Services” has the most shares we can filter by Industry to see specific industries to invest to and work with.
 
 
 
-Summary:
+                                                  SUMMARY
 
 According to our Analysis it appears to be that Consumer Services has the most shares, following by Health Care & Finance.
 Real Estate Investment Trust has approximately 30% shares of the whole industry, investing in Real Estate and working with this Sector will bring additional Revenue to the Company.
